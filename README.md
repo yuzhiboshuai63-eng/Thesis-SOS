@@ -1,4 +1,4 @@
-# Paper Reduce - 学术论文全能助手
+# Thesis SOS - 论文急救全能助手
 
 SOLO Skill for academic paper rewriting, AI detection reduction, quality review, and style analysis. Supports Chinese and English.
 
@@ -93,12 +93,15 @@ SOLO Skill for academic paper rewriting, AI detection reduction, quality review,
 
 ```bash
 cp -r paper-reduce /data/user/skills/
+# 或重命名为 Thesis-SOS
+cp -r paper-reduce /data/user/skills/Thesis-SOS
 ```
 
 ## 🚀 使用方法
 
 在 SOLO 中提及以下关键词即可触发：
 
+- "论文急救"、"Thesis SOS"
 - "论文降重"、"降低重复率"、"降AI率"、"论文改写"
 - "论文格式修改"、"模仿改写"、"风格学习"
 - "错别字检查"、"论文校对"、"proofreading"
@@ -108,7 +111,7 @@ cp -r paper-reduce /data/user/skills/
 ## 📁 文件结构
 
 ```
-paper-reduce/
+paper-reduce/ (或 Thesis-SOS/)
 ├── SKILL.md                          # Skill 核心定义
 ├── README.md                         # 项目说明
 ├── LICENSE                           # MIT 许可证
@@ -142,3 +145,7 @@ paper-reduce/
 ## 📄 许可证
 
 MIT License
+
+## 🔗 GitHub 仓库
+
+https://github.com/yuzhiboshuai63-eng/paper-reduce
