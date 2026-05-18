@@ -464,7 +464,7 @@ def main():
             json.dump(result, f, ensure_ascii=False, indent=2)
         print(f"质量检查结果已保存到: {output_path}")
     else:
-        print(json.dumps(result, f, ensure_ascii=False, indent=2))
+        print(json.dumps(result, ensure_ascii=False, indent=2))
 
     # 打印摘要
     print(f"\n===== 质量检查摘要 =====")

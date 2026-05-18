@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>论文降重对比视图</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h1 { color: #333; border-bottom: 2px solid #4a90d9; padding-bottom: 10px; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stat-card { background: #f8f9fa; padding: 15px; border-radius: 6px; border-left: 4px solid #4a90d9; }
+        .stat-label { font-size: 12px; color: #666; text-transform: uppercase; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #333; margin-top: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background: #4a90d9; color: white; padding: 12px; text-align: left; font-weight: 500; }
+        td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+        tr:hover { background: #f8f9fa; }
+        .original { color: #666; background: #fff5f5; }
+        .rewritten { color: #333; background: #f5fff5; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 500; }
+        .badge-未修改 { background: #e8f5e9; color: #2e7d32; }
+        .badge-微调 { background: #fff3e0; color: #ef6c00; }
+        .badge-句式变换 { background: #e3f2fd; color: #1565c0; }
+        .badge-语义改写 { background: #fce4ec; color: #c2185b; }
+        .badge-深度改写 { background: #f3e5f5; color: #7b1fa2; }
+        .similarity { font-size: 12px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>论文降重对比视图</h1>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">总句子数</div>
+                <div class="stat-value">7</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">修改句子数</div>
+                <div class="stat-value">7</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">修改比例</div>
+                <div class="stat-value">100.0%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">平均相似度</div>
+                <div class="stat-value">37.3%</div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 5%;">序号</th>
+                    <th style="width: 42%;">原文</th>
+                    <th style="width: 42%;">改写后</th>
+                    <th style="width: 11%;">修改类型</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td class="original">本研究采用深度学习技术对图像进行分类。</td>
+                    <td class="rewritten">通过构建卷积神经网络模型，实现了对输入图像的精确分类与识别。</td>
+                    <td>
+                        <span class="badge badge-深度改写">深度改写</span>
+                        <div class="similarity">相似度: 24.5%</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td class="original">本研究采用深度学习技术对图像进行分类。</td>
+                    <td class="rewritten">借助深度学习算法，完成了图像类别的准确判定。</td>
+                    <td>
+                        <span class="badge badge-语义改写">语义改写</span>
+                        <div class="similarity">相似度: 39.0%</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td class="original">本研究采用深度学习技术对图像进行分类。</td>
+                    <td class="rewritten">利用神经网络方法，达成了图像分类任务的高效处理。</td>
+                    <td>
+                        <span class="badge badge-深度改写">深度改写</span>
+                        <div class="similarity">相似度: 27.9%</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td class="original">随着互联网技术的快速发展，电子商务已经成为人们日常生活中不可或缺的一部分。</td>
+                    <td class="rewritten">网络信息技术的持续演进，使得线上交易模式深度融入了大众的消费行为之中。</td>
+                    <td>
+                        <span class="badge badge-深度改写">深度改写</span>
+                        <div class="similarity">相似度: 22.2%</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td class="original">随着互联网技术的快速发展，电子商务已经成为人们日常生活中不可或缺的一部分。</td>
+                    <td class="rewritten">互联网技术的不断进步，让电子商务成为了人们日常生活的组成部分。</td>
+                    <td>
+                        <span class="badge badge-句式变换">句式变换</span>
+                        <div class="similarity">相似度: 67.6%</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td class="original">实验结果表明，该方法具有较高的准确率和较好的鲁棒性。</td>
+                    <td class="rewritten">测试数据证实，所提方案不仅精度表现优异，同时在面对各类干扰时也展现出良好的稳定性。</td>
+                    <td>
+                        <span class="badge badge-深度改写">深度改写</span>
+                        <div class="similarity">相似度: 20.9%</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td class="original">实验结果表明，该方法具有较高的准确率和较好的鲁棒性。</td>
+                    <td class="rewritten">实验结果显示，该方法具备较高的准确性及出色的抗干扰能力。</td>
+                    <td>
+                        <span class="badge badge-句式变换">句式变换</span>
+                        <div class="similarity">相似度: 59.3%</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
